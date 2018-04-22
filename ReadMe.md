@@ -10,3 +10,13 @@
 ## Working with Vault
 - $export VAULT_DEV_LISTEN_ADDRESS='0.0.0.0:8200'   ==> to customize the server address 
 - $vault server -dev    ==> to start the server address
+
+## Starting the server with specific config
+- vault server -dev -config='config.json'
+- in the config 
+```
+listener "tcp" {
+  address     = "0.0.0.0:8200"
+  tls_disable = 1
+}
+```
