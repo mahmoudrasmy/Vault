@@ -12,7 +12,7 @@
 - $vault server -dev    ==> to start the server address
 
 ## Starting the server with specific config
-- vault server -dev -config='config.json'
+- $vault server -dev -config='config.json'
 - in the config 
 ```
 listener "tcp" {
@@ -20,3 +20,5 @@ listener "tcp" {
   tls_disable = 1
 }
 ```
+-To start the server using specific config
+  $vault server -dev -dev-listen-address="0.0.0.0:8200"
