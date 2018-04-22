@@ -24,3 +24,4 @@ listener "tcp" {
   $vault server -dev -dev-listen-address="0.0.0.0:8200"
 - $vault init
 - $vault write secret/hello foo=world
+- $vault read secret/hello
